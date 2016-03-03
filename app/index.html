@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="calendarDemoApp">
+<html ng-app="calendarDemoApp" ng-controller="ctrl">
 <head>
 <title>Calendar Directive Challenge</title>
 <link rel="stylesheet" type="text/css" href="./main.css" />
@@ -7,6 +7,10 @@
 <body>
 
 <!-- your code for nav and calendar directive instance here -->
+<div class="container">
+	<div class="nav_wrap" calendar-nav></div>
+	<div class="calendar_wrap" calendar></div>
+</div>
 
 <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
