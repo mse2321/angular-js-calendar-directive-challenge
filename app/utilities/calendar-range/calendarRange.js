@@ -11,7 +11,7 @@ var CalendarRange = {
       day : date.getDate(),
       month : date.getMonth(),
       year : date.getFullYear()
-    };
+    }
   },
 
   getMonthlyRange : function(date) {
@@ -21,7 +21,7 @@ var CalendarRange = {
 
     var firstDay = new Date(startDay);
     if (firstDay.getDay() > 0) { //Not Sunday
-      firstDay.setDate(firstDay.getDate() - (firstDay.getDay()));
+      firstDay.setTime(firstDay.getTime() - (firstDay.getDay() * this.DAY));
     }
 
     var endDay = new Date(startDay);
@@ -32,16 +32,16 @@ var CalendarRange = {
       endDay.setMonth(month + 1);
     }
 
-    endDay.setDate(endDay.getDate() - 1);
+    endDay.setTime(endDay.getTime() - this.DAY);
 
     var lastDay = new Date(endDay);
-    lastDay.setDate(lastDay.getDate() + (6 - endDay.getDay()));
+    lastDay.setTime(lastDay.getTime() + (6 - endDay.getDay()) * this.DAY);
 
-    var day = new Date(firstDay);
+    var date = new Date(firstDay);
     var days = [];
-    while(day <= lastDay) {
-      days.push(this.prepareDate(day));
-      day.setDate(day.getDate() + 1);
+    while(date <= lastDay) {
+      days.push(this.prepareDate(date));
+      date.setTime(day.getTime() + this.DAY);
     }
 
     return {
