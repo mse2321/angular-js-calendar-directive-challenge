@@ -1,0 +1,7 @@
+<div id="calendarWrap">
+    <div class="calendarDays" ng-repeat="day in days">
+      <div class="individualDays" ng-class="{extraDays: !currentMonthCheck(day.month)}">
+      {{ day.day }}
+      </div>
+    </div>
+</div>

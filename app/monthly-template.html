@@ -1,9 +1,0 @@
-<h2>{{ selectedDate.month }} {{ selectedDate.year }}</h2>
-
-<div id="calendarTable">
-    <div class="calendarDates" ng-repeat="day in days">
-      <div class="individualDates" ng-class="{extra: !isCurrentMonth(day.month)}">
-      {{ day.day }}
-      </div>
-    </div>
-</div>

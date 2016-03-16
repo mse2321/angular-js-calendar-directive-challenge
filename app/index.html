@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="calendarDemoApp" ng-controller="ctrl">
-<head>
-<title>Calendar Directive Challenge</title>
-<link rel="stylesheet" type="text/css" href="./main.css" />
-</head>
-<body>
-
-<!-- your code for nav and calendar directive instance here -->
-<!--<div class="container">
-	<div class="nav_wrap" calendar-nav></div>
-	<div class="calendar_wrap" calendar></div>
-</div>-->
-
-  <header>
-    <h1>Select a date:</h1>
-    <select ng-model="selectedDate.month" ng-options="month as month for month in monthsTwelve"></select>
-    <select ng-model="selectedDate.year" ng-options="year as year for year in yearsThirty"></select>
-  </header>
-
- <!-- <calendar-display></calender-display>-->
-  <div class="calendar_wrap" calendar></div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
-<!--<script type="text/javascript" src="./bonnie.js"></script>-->
-<script type="text/javascript" src="./sample.js"></script>
-<!--<script type="text/javascript" src="./date.js"></script>-->
-</body>
+	<head>
+		<title>Calendar Directive Challenge</title>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="./main.css" />
+	</head>
+	<body>
+		<header>
+	  		<calendar-nav></calendar-nav>
+		</header>
+		<section>
+	  		<calendar></calendar>
+		</section>
+		<footer>
+			<p>&copy;2016 ME Innovation</p>
+		</footer>
+		<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
+		<script type="text/javascript" src="./app.js"></script>
+	</body>
 </html>

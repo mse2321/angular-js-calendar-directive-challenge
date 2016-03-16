@@ -1,0 +1,4 @@
+<h1>Select a date:</h1>
+<select ng-model="chosenDate.month" ng-options="month as month for month in monthList"></select>
+<select ng-model="chosenDate.year" ng-options="year as year for year in years"></select>
+<h2>{{ chosenDate.month }} {{ chosenDate.year }}</h2>

@@ -1,57 +1,82 @@
-/* your css code goes here */
-/*.day_wrap { width: 14%; display: inline-block; outline: 1px solid #eee; background-color: white; height: 180px; padding-left: 10px; padding-top: 10px; }
-.nav_wrap { width: 100%; background-color: #666; color: white;}
-*/
-
 body {
   margin: 1em;
-  text-align: center;
-  font-family: 'Roboto Condensed';
-  color: white;
-  background: mediumturquoise;
+  font-family: 'Ubuntu', sans-serif;
+  color: #ECEFF1;
+  background: linear-gradient(to bottom right, #546E7A, #B0BEC5);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-weight: 300;
+  height: 100%;
 }
 
-header {
-  width: 7em;
-  padding: 1em 2em;
-  margin-left: auto;
-  margin-right: auto;
-  background: white;
-  color: mediumturquoise;
+header { 
+  background-color: #FF6E40;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  height: 50px;
+  width: 97.25%;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px 2px #37474F; 
 }
 
-h1 {
-  font-size: 1em;
-  font-weight: 400;
+h1 { 
+  font-size: 1em; 
+  font-weight: 400; 
+  display: inline; 
+  margin-left: 10px; 
 }
 
- select {
-   width: 7em;
-   font-size: 1em;
-   border: 1px solid white;
-   background: mediumturquoise;
-   color: white;
-   height: 2em;
-   font-family: 'Roboto Condensed';
+h2 { 
+  display: inline; 
+  text-align: right; 
+  position: absolute; 
+  right: 55px; 
+  top: -5px; 
+  font-size: 40px; 
 }
 
-.calendarDates {
+select { 
+  width: 7em; 
+  font-size: 1em; 
+  border: 1px solid gray; 
+  background: white; 
+  color: #263238; 
+  height: 2em; 
+  font-family: 'Ubuntu', 
+  sans-serif; 
+  margin-top: 10px; 
+}
+
+footer { 
+  position: fixed; 
+  color: #607D8B; 
+  bottom: 2.5%; 
+  left: 45.3%; 
+}
+
+.calendarDays {
   text-align: left;
-  outline: 2px solid white;
-  border: 2px solid white;
+  border: 2px solid #ECEFF1;
   display: inline-block;
   width: 13%;
-  min-height: 6em;
-  padding: 0.25em;
-  font-weight: 700;
+  min-height: 8em;
+  padding: 0.5em;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-.individualDates {
+#calendarWrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.individualDays {
   height: 6em;
+  font-size: 20px;
 }
 
-.extra {
-  background: white;
-  color: mediumturquoise;
+.extraDays {
+  background: rgba(0,0,0,0.2);
+  color: white;
 }
