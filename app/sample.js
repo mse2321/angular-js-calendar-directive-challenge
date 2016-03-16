@@ -17,21 +17,21 @@ demo.controller('ctrl', function($scope){
     $scope.yearsThirty = yearsThirty;
   	$scope.selectYear = year;
 
-	$scope.monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	$scope.chosenMonth = $scope.monthList[today.getMonth()];
+	$scope.monthsTwelve = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	$scope.selectMonth = $scope.monthsTwelve[today.getMonth()];
 
-	$scope.chosenDate = {
-		month: $scope.chosenMonth,
+	$scope.selectedDate = {
+		month: $scope.selectMonth,
 		year: $scope.selectYear
 	};
 
 	$scope.isCurrentMonth = function(currentMonth){
-		return (currentMonth == $scope.monthList.indexOf($scope.chosenDate.month));
+		return (currentMonth == $scope.monthsTwelve.indexOf($scope.selectedDate.month));
 	};
 
-	$scope.$watchCollection('chosenDate', function(chosenDate){
-		$scope.updatedDate = chosenDate.month + ', ' + chosenDate.year;
-		$scope.range = CalendarRange.getMonthlyRange(new Date($scope.updateDate));
+	$scope.$watchCollection('selectedDate', function(selectedDate){
+		$scope.newDate = selectedDate.month + ', ' + selectedDate.year;
+		$scope.range = CalendarRange.getMonthlyRange(new Date($scope.newDate));
 		console.log($scope.range);
 		$scope.today = today;
 		$scope.month = month;
@@ -61,15 +61,10 @@ demo.controller('ctrl', function($scope){
 
 });
 demo.directive('calendar', function() {
-	return {
-		template: '<div class="day_wrap" ng-repeat="day in days">{{ day }}</div>',
-		restrict: 'E',
-		scope: true,
-		transclude: true
-	}
+  return {
+    restrict: 'AE',
+    templateUrl: 'monthly-template.html',
+    scope: true,
+    transclude: true
+  }
 })
-demo.directive('calendarNav', function() {
-	return {
-		template: '<select ng-model="chosenDate.month" ng-options="month as month for month in monthList"></select><select ng-model="chosenDate.year" ng-options="year as year for year in yearsThirty"></select>'
-	}
-});

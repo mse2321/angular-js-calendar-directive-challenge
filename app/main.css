@@ -1,3 +1,57 @@
 /* your css code goes here */
-.day_wrap { width: 14%; display: inline-block; outline: 1px solid #eee; background-color: white; height: 180px; padding-left: 10px; padding-top: 10px; }
+/*.day_wrap { width: 14%; display: inline-block; outline: 1px solid #eee; background-color: white; height: 180px; padding-left: 10px; padding-top: 10px; }
 .nav_wrap { width: 100%; background-color: #666; color: white;}
+*/
+
+body {
+  margin: 1em;
+  text-align: center;
+  font-family: 'Roboto Condensed';
+  color: white;
+  background: mediumturquoise;
+  font-weight: 300;
+}
+
+header {
+  width: 7em;
+  padding: 1em 2em;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  color: mediumturquoise;
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+ select {
+   width: 7em;
+   font-size: 1em;
+   border: 1px solid white;
+   background: mediumturquoise;
+   color: white;
+   height: 2em;
+   font-family: 'Roboto Condensed';
+}
+
+.calendarDates {
+  text-align: left;
+  outline: 2px solid white;
+  border: 2px solid white;
+  display: inline-block;
+  width: 13%;
+  min-height: 6em;
+  padding: 0.25em;
+  font-weight: 700;
+}
+
+.individualDates {
+  height: 6em;
+}
+
+.extra {
+  background: white;
+  color: mediumturquoise;
+}

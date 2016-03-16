@@ -21,7 +21,7 @@ var CalendarRange = {
 
     var firstDay = new Date(startDay);
     if (firstDay.getDay() > 0) { //Not Sunday
-      firstDay.setTime(firstDay.getTime() - (firstDay.getDay() * this.DAY));
+      firstDay.setDate(firstDay.getDate() - (firstDay.getDay()));
     }
 
     var endDay = new Date(startDay);
@@ -32,16 +32,16 @@ var CalendarRange = {
       endDay.setMonth(month + 1);
     }
 
-    endDay.setTime(endDay.getTime() - this.DAY);
+    endDay.setDate(endDay.getDate() - 1);
 
     var lastDay = new Date(endDay);
-    lastDay.setTime(lastDay.getTime() + (6 - endDay.getDay()) * this.DAY);
+    lastDay.setDate(lastDay.getDate() + (6 - endDay.getDay()));
 
-    var date = new Date(firstDay);
+    var day = new Date(firstDay);
     var days = [];
-    while(date <= lastDay) {
-      days.push(this.prepareDate(date));
-      date.setTime(day.getTime() + this.DAY);
+    while(day <= lastDay) {
+      days.push(this.prepareDate(day));
+      day.setDate(day.getDate() + 1);
     }
 
     return {
